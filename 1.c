@@ -8,7 +8,12 @@ int get_int();
 
 int main(void)
 {
-    int number = get_int();
+    printf("Ecrire un premier chiffre entier: ");
+    int a = get_int();
+    printf("Ecrire un deuxieme chiffre entier: ");
+    int b = get_int();
+    int c = a + b;
+    printf("La somme des deux nombres entier est %i\n", c);
 }
 
 //Fonction qui demande de saisir un nombre réels
@@ -16,9 +21,6 @@ int main(void)
 int get_int()
 {
     int number;
-    scanf("%i", number);
-    for (int i = 0, n = strlen(number); i < n; i++)
-    {
-
-    }
+    scanf("%i", &number);
+    return number;
 }
