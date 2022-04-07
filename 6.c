@@ -5,22 +5,23 @@
 
 int main(void)
 {
-    int suites[50];
     int i;
     int j = 0;
+    int k = 0;
 
     do
     {
         printf("Suite de chiffre: ");
         scanf("%i", &i);
 
-        suites[j] = i;
-        j++;
+        if (i > j)
+            j = i;
+
+        if (i < k && i != 0)
+            k = i;
     }
     while (i != 0);
 
-    for ( int k = 0; k < j; k++)
-    {
-        printf("%i", suites[k]);
-    }
+    printf("Le plus grand nombre saisi est: %i\n", j);
+    printf("Le plus petit nombre saisi est: %i\n", k);
 }
