@@ -7,7 +7,7 @@ int main(void)
 {
     int i;
     int j = 0;
-    int k = 0;
+    int k = 999;
 
     do
     {
@@ -18,7 +18,9 @@ int main(void)
             j = i;
 
         if (i < k && i != 0)
-            k = i;
+	{
+		k = i;
+	}
     }
     while (i != 0);
 
